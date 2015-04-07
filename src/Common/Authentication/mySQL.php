@@ -1,6 +1,8 @@
 <?php
+
 namespace Common\Authentication;
 use PDO;
+
 	class UserFromMySQL implements IAuthentication
 	{
 		
@@ -18,7 +20,7 @@ use PDO;
 		
 		try
 			{
-				$this->db = new PDO('mysql:host=localhost;dbname=wsu4350;charset=utf8', 'root', '');
+				$this->db = new PDO('mysql:host=localhost;dbname=Project3DB;charset=utf8', 'root', '');
 			}
 			catch(PDOException $e)
 			{
