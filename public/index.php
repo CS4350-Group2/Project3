@@ -12,17 +12,6 @@ $app = new \Slim\Slim(
     $config['app']['slim-config']
 );
 
-// $app->get('/hello/:name', function ($name) {
-//     echo "Hello, $name";
-// });
-
-// $app->post('/', function () {
-//     echo "I am Garrett";
-// });
-
-// $app->post('/auth', function () {
-//     echo "instantiate controller here";
-// });
 
 
 $app->get('/login/', function () {
