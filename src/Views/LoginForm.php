@@ -1,14 +1,3 @@
-<?php
-
-namespace Views;
-
-
-class LoginForm extends View
-{
-    public function __construct()
-    {
-        $this->content = <<<LOGIN_FORM
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,15 +5,14 @@ class LoginForm extends View
         <title>Example Login Form</title>
     </head>
     <body>
-    <!--
-        <div align="center">
-            <form method="POST" action="/auth">
+    
+        <div align="center" id="loginForm">
+            <p>
                 Username: <input type="text" name="username" size="15" /><br />
                 Password: <input type="password" name="password" size="15" /><br />
-                mySQL: <input type="mySQL" name="mySQL" size="15" /><br />
-                <p><input type="submit" value="Login" /></p>
-            </form>
-        </div> -->
+                <p><input type="submit" value="Login" onclick="formSubmit"/></p>
+           </p>
+        </div> 
 
 </form>
 </body>
@@ -39,9 +27,26 @@ class LoginForm extends View
         
           alert(data);
         });
+        $.ajax({
+            type:"POST",
+            url:"/api",
+            data:data,
+            cache: false,
+            dataType: 'JSON',
+            statusCode:
+            {
+                200: function()
+                {
+                    alert('success');
+                    location.href= "/profile"
+                },
+                401: function()
+                {
+                    alert('unauthorized user');
+                    location.href="/register", name, password
+                }
+            }
+        });
     }
 </script>
 
-LOGIN_FORM;
-    }
-}

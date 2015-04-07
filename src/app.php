@@ -1,15 +1,23 @@
 <?php
 
-require 'Config/bootstrap.php';
+$app->get('/', function() {
+    //echo "Hello, $name";
+    require_once realpath(__DIR__.DIRECTORY_SEPARATOR.'LoginForm.php');
+});
 
-/**
- * @var \Common\Http\SimpleRequest();
- */
-$request = new \Common\Http\SimpleRequest($_SERVER);
+$app->get('/welcome', function() {
+    //echo "Hello, $name";
+    require_once realpath(__DIR__.DIRECTORY_SEPARATOR.'welcome.php');
+});
 
-/**
- * @var \Common\Routers\SimpleRouter()
- */
-$router = new \Common\Routers\SimpleRouter($config['app']['uri-mappings']);
+$app->get('/register', function() {
+    //echo "Hello, $name";
+    require_once realpath(__DIR__.DIRECTORY_SEPARATOR.'register.php');
+});
 
-$router->handle($request);
+$app->post('/api', function() use($app){
+    //echo "Hello, $name";
+    
+});
+
+$app->run();
