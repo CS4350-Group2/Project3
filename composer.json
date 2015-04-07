@@ -1,4 +1,11 @@
-{
+
+
+	"autoload":{
+		"psr-4":{
+			"\\common\\authentication\\": "src/Common/Authentication",
+			"\\config\\": "src/Config"
+		}
+	},
     "require": {
         "slim/slim": "~2.6"
     }
