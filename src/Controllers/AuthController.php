@@ -10,10 +10,11 @@
  * $LastChangedBy$
  */
 
+
 namespace Controllers;
-use Common\Authentication\fileLoaded;
-use Common\Authentication\inMemory;
-use Common\Authentication\mySQL;
+use Common\Authentication\IAuthenticate;
+use Views\LoginForm;
+// add more views
 
 
 /**

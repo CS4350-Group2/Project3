@@ -10,6 +10,7 @@ abstract class View
      * @access protected
      */
     protected $content;
+    protected $data;
 
     /**
      * Function show - displays the content
@@ -18,8 +19,17 @@ abstract class View
      *
      * @access public
      */
-    public function show()
+    public function show($data = array())
     {
-        echo $this->content;
+
+        $navigation = new Navigation();
+        echo $navigation->content;//Output Navigation to pages that extend View class
+
+        echo $this->content;//Output content of pages that extend View Class
+
+
+
     }
+
+
 }
