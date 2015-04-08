@@ -1,18 +1,20 @@
 <?php
 
+$autoLoader = realpath(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'vendor'.
+    DIRECTORY_SEPARATOR.'autoload.php');
+
+require $autoLoader;
+
 // Load server specific configuration data.  Should
 // check an environment variable load the appropriate
 // server configuration file.
+
+\Slim\Slim::registerAutoloader();
+
 require 'config.php';
-require '../vendor/autoload.php';
-// Load all namespaces based on directory structure
-// in the src/ directory.
-require 'Autoloader.php';
 
 
-$loader = new \Autoloader($config['app']['classes']);
-$loader->register();
 
 $app = new \Slim\Slim();
-// app configuration
-$app->run();
+
+require realpath(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'app.php');

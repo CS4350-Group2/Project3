@@ -2,8 +2,9 @@
 
 	"autoload":{
 		"psr-4":{
-			"\\common\\authentication\\": "src/Common/Authentication",
-			"\\config\\": "src/Config"
+			"\\Common\\Authentication\\": "src/Common/Authentication",
+			"\\Config\\": "src/Config",
+            "\\Views\\": "src/Views"
 		}
 	},
     "require": {

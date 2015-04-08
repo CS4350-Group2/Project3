@@ -1,33 +1,6 @@
 <?php
-require '../vendor/autoload.php';
-require 'config.php';
 
-$app = new \Slim\Slim();
+$bootstrap = realpath(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.
+    'bootstrap.php');
 
-
-\Slim\Slim::registerAutoloader();
-
-
-$app = new \Slim\Slim(
-    $config['app']['slim-config']
-);
-
-
-
-$app->get('/login/', function () {
-	
-    $logincontroller = new \Controllers\AuthController();
-    $logincontroller->action();
-});
-
-$app->post('/login/', function () {
-    $logincontroller = new \Controllers\AuthController();
-    $logincontroller->login();
-});
-// add another view here
-// $app->get('/welcome/', function () {
-//     $logincontroller = new \Controllers\AuthController();
-//     $logincontroller->login();
-// }); 
-
-$app->run();
+require $bootstrap; 
