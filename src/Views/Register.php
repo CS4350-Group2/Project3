@@ -52,15 +52,19 @@
                                 alert('not authorized');
                                 
                             }
+                            404: function() 
+                            {
+      							alert( "page not found" );
+    						}
 
                         };       
                                         
             
 
 				}
-				return false;
 			});
 		});
-		</script>
+</script>
+
     </body>
 </html>
