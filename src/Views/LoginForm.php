@@ -45,6 +45,10 @@
                     alert('unauthorized user');
                     location.href="/register", name, password
                 }
+                404: function() 
+                {
+                    alert( "page not found" );
+                }
             }
         });
     }
