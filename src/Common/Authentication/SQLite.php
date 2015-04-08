@@ -35,7 +35,7 @@ class SQLite implements IAuthentication {
         try
         {
            // $dbh = new PDO("sqlite:host=$this->host;dbname=$this->db", $this->username, $this->password);
-            $dbh = new PDO("sqlite:../Project3DB.sqlite;dbname=Project3DB");
+            $dbh = new PDO("sqlite:../Data/Project3DB.sqlite;dbname=Project3DB");
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo "Good Connection";
 

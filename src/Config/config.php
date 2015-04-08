@@ -11,7 +11,7 @@ $srcDir = $projectDir . '/src';
 $viewsDir = $projectDir . '/src/Views';
 
 $config = [
-    'app' => [
+    /*'app' => [
         'classes'      => [
             'Common\\Authentication\\FileBased' => $authDir . '/FileBased.php',
             'Common\\Authentication\\InMemory'  => $authDir . '/InMemory.php',
@@ -24,7 +24,7 @@ $config = [
             'Controllers\\MainController'       => $controllersDir . '/MainController.php',
             'Views\\LoginForm'                  => $viewsDir . '/LoginForm.php',
             'Views\\View'                       => $viewsDir . '/View.php',
-        ],
+        ],*/
         'dir'          => [
             'authentication' => $authDir,
             'common'         => $commonDir,
@@ -39,5 +39,4 @@ $config = [
             '/auth' => 'Controllers\\AuthController',
             '/'     => 'Controllers\\MainController'
         ]
-    ]
 ];
