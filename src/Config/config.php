@@ -20,9 +20,5 @@ $config = [
             'routers'        => $routerDir,
             'src'            => $srcDir,
             'views'          => $viewsDir
-        ],
-        'uri-mappings' => [
-            '/auth' => 'Controllers\\AuthController',
-            '/'     => 'Controllers\\MainController'
         ]
 ];
