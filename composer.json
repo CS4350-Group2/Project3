@@ -1,13 +1,14 @@
-
-
-	"autoload":{
-		"psr-4":{
-			"\\Common\\Authentication\\": "src/Common/Authentication",
-			"\\Config\\": "src/Config",
-            "\\Views\\": "src/Views"
-		}
-	},
+{
     "require": {
         "slim/slim": "~2.6"
+    },
+    "autoload":{
+    "psr-4":{
+      "Common\\Authentication\\": "src/Common/Authentication/",
+      "Config\\": "src/Config/",
+      "Views\\": "src/Views/"
     }
+  }
 }
+
+
