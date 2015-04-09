@@ -6,15 +6,17 @@ use PDO;
 use PDOException;
 
 
-class SQLite implements IAuthentication {
+class SQLiteDB implements IAuthentication {
+    private $dbh;
 
     public function __construct()
     {
         try
         {
-            $this->conn = new PDO('sqlite:../Data/Project3DB.sqlite');
+            $this->dbh = new PDO('sqlite:../Data/Project3DB');
 
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         }
         catch(PDOException $e)
         {
@@ -33,25 +35,19 @@ class SQLite implements IAuthentication {
      */
     public function authenticate($username, $password)
     {
-        try
-        {
 
-            $stmt = $this->conn->query("SELECT username,password FROM Users WHERE username= '".$username."' AND
-                password='".$password."';");
-            $stmt->execute();
+            $stmt = $this->dbh->query('SELECT username FROM Users WHERE username = '.$this->dbh->quote($username).
+                    ' AND password = '.$this->dbh->quote($password));
+            //$stmt->execute();
 
             $stmtReturn = $stmt->fetchAll();
-
+            echo $stmtReturn;
             if(count($stmtReturn) < 0)
             {
                 var_dump($stmtReturn);
                 return true;
             }
-        }
-        catch(PDOException $e)
-        {
-            echo "Error: ".$e->getMessage()."<br />";
-        }
+
 
         return false;
     }
