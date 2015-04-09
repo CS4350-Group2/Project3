@@ -1,10 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: arielstewart
- * Date: 4/8/15
- * Time: 12:34 PM
- */
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,7 +31,7 @@
 					$.ajax({
 						type: "POST",
 						url: "/",
-						data: dataString,
+						data: data,
 						cache: false,
                         dataType:'JSON',
                         statusCode: 
