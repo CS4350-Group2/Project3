@@ -14,7 +14,6 @@ require $autoLoader;
 require 'config.php';
 
 
-
 $app = new \Slim\Slim();
 
 require realpath(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'app.php');
