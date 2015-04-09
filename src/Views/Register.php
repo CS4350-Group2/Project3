@@ -15,7 +15,7 @@
 						<input id="name" type="text"/><br /><br />
                 	<label>Password: </label>
 						<input id="password" type="password"/><br /><br />
-                	<input id="submit" type="button" onclick="registerSubmission" value="Create User" /><br />
+                	<input id="submit" type="button" onclick="registerSubmission" value="Submit" /><br />
             	</p>
             </div>
         </div>

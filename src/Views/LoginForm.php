@@ -15,15 +15,15 @@
 
     <body>
     
-        <!-- <div align="center" id="loginForm">
+         <div align="center" id="loginForm">
             <p>
                 Username: <input type="text" name="username" size="15" /><br />
                 Password: <input type="password" name="password" size="15" /><br />
                 <p><input type="submit" value="Login" onclick="formSubmit()"/></p>
            </p>
-        </div>  -->
+        </div>  
 
-        <form class="form-inline" id="loginForm">
+        <!-- <form class="form-inline" id="loginForm">
           <div class="form-group">
             <label for="exampleInputName2">Username: </label>
             <input type="text" class="form-control" id="username" placeholder="username">
@@ -33,7 +33,7 @@
             <input type="email" class="form-control" id="password" placeholder="password">
           </div>
           <button type="submit" class="btn btn-default" onclick="formSubmit">Submit</button>
-        </form>
+        </form> -->
 
 </form>
 
